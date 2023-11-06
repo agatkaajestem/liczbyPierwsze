@@ -140,8 +140,8 @@ void sieveOfEratosthenes( int n)
 
 int main()
 {
-    //naive_1(1000);
-    //naive_2(1000);
-    //naive_3(1000);
+    naive_1(1000);
+    naive_2(1000);
+    naive_3(1000);
     sieveOfEratosthenes(1000);
 }
