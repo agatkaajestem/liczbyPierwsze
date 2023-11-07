@@ -24,7 +24,7 @@ void naive_1( int n)
                 
             if ( i == d)
             {
-                //cout << i << " ";
+                cout << i << " ";
                 break;
             }
             if ( Prime == false)
@@ -35,7 +35,7 @@ void naive_1( int n)
         i++;
         Prime = true;
     }
-    //cout << endl << endl;
+    cout << endl << endl;
 }
 
 void naive_2( int n)
@@ -43,7 +43,7 @@ void naive_2( int n)
     int i = 3, d;
     // i - liczba; n - przedział; d - dzielnik
     bool Prime = true;
-    //cout << "2 ";
+    cout << "2 ";
     while( i <= n)
     {
         d = 3;
@@ -73,14 +73,14 @@ void naive_2( int n)
         i++;
         Prime = true;
     }
-    //cout << endl << endl;
+    cout << endl << endl;
 }
 
 void naive_3( int n)
 {
     int i = 3, d;
     // i - liczba; n - przedział; d - dzielnik
-    //cout << "2 ";
+    cout << "2 ";
     bool Prime = true;
     while( i <= n)
     {
@@ -100,7 +100,7 @@ void naive_3( int n)
                 
             if ( i == d)
             {
-                //cout << i << " ";
+                cout << i << " ";
                 break;
             }
             if ( Prime == false)
@@ -111,7 +111,7 @@ void naive_3( int n)
         i++;
         Prime = true;
     }
-    //cout << endl << endl;
+    cout << endl << endl;
 }
 
 void sieveOfEratosthenes( int n)
@@ -130,8 +130,7 @@ void sieveOfEratosthenes( int n)
     for( int i = 2; i <= n; i++)
         if( A[i] == true)
         {
-           // cout << i << " ";
-           super++;
+           cout << i << " ";
         }
 
 }
@@ -140,8 +139,13 @@ void sieveOfEratosthenes( int n)
 
 int main()
 {
-    naive_1(1000);
-    naive_2(1000);
-    naive_3(1000);
-    sieveOfEratosthenes(1000);
+    int b = { 1000, 10000, 100000, 1000000};
+    for( int i = 0; i > 4; i++)
+    {
+        naive_1(b[i]);
+        naive_2(b[i]);
+        naive_3(b[i]);
+        sieveOfEratosthenes(b[i]);
+    }
+    
 }
